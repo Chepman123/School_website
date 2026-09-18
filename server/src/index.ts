@@ -3,9 +3,7 @@ import cors from 'cors';
 import helmet from "helmet";
 import Reg from './Routes/RegLog';
 import Main from './Routes/Main';
-import User from './Routes/User';
-import Admin from './Routes/Admin';
-import News from './Routes/News';
+
 const cookieParser = require('cookie-parser');
 const app = express();
 app.use(helmet());
@@ -32,6 +30,7 @@ app.use(cors({
 app.options('*', cors());
 
 app.use('/', Reg());
+app.use('/',Main());
 
 
 const PORT = 5000;

@@ -7,7 +7,6 @@ export default()=>{
    const service:RegLogServ = new RegLogServ();
    const controller:RegLogCon = new RegLogCon(service);
 
-   router.post("/Reg",(req:Request,res:Response)=>controller.Reg(req,res));
    router.post("/Login",(req:Request,res:Response)=>controller.Login(req,res));
 
    return router;

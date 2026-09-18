@@ -18,6 +18,13 @@ html{
   background-color: #444; 
   border-radius: 6px;
 }
+body{
+  min-height: 100vh;
+   background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/bg.png');
+ background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
 @media(max-width:765px){
   body{
     overflow-y: auto;

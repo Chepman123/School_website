@@ -8,7 +8,7 @@ export default function Login(){
     const [password,setPassword] = useState<string>("");
     const [result,setResult] = useState<RegLogResult>(null);
     async function Login(){
-           const response = await fetch("https://pervomens-website-2.onrender.com/Login",{
+           const response = await fetch("http://localhost:5000/Login",{
             method:"POST",
             headers:{"Content-type":"application/json"},
             body:JSON.stringify({username:username,password:password}),
@@ -22,9 +22,8 @@ export default function Login(){
     return <main className={classes.main}>
     <form className={classes.form}>
         <h1>Log in</h1>
-        <input type="text" placeholder="username" value={username} onChange={(e)=>setUsername(e.target.value)}/>
+        <input type="text" placeholder="login" value={username} onChange={(e)=>setUsername(e.target.value)}/>
         <input type="password" placeholder="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-        <Link to={"/Reg"}>Create account</Link>
         {
             result != null &&<p>{result=="username"?"username doesn't exist":"password is incorrect"}</p>
         }
