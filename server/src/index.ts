@@ -3,6 +3,10 @@ import cors from 'cors';
 import helmet from "helmet";
 import Reg from './Routes/RegLog';
 import Main from './Routes/Main';
+import AdminPanel from './Routes/AdminPanel';
+import News from './Routes/News';
+import Profile from './Routes/Profile';
+import GradeBook from './Routes/GradeBook';
 
 const cookieParser = require('cookie-parser');
 const app = express();
@@ -31,6 +35,10 @@ app.options('*', cors());
 
 app.use('/', Reg());
 app.use('/',Main());
+app.use('/AdminPanel',AdminPanel());
+app.use('/news',News());
+app.use('/profile',Profile());
+app.use('/gradebook',GradeBook());
 
 
 const PORT = 5000;

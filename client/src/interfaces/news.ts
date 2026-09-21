@@ -1,0 +1,1 @@
+export default interface Inews{title:string,content:string,image:string,id:number,created_at?:Date,created_by?:string}

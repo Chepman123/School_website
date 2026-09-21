@@ -1,21 +1,42 @@
 header {
     width: 100%;
-    height: 70px;
-    background: rgba(0, 0, 0);
+    min-height: 70px;
+
+    background: rgb(29, 29, 66);
+
+    z-index: 10;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     position: sticky;
     top: 0;
+
     box-shadow: 0px 5px 15px 5px #000000;
+
+    .home {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
 
     h1 {
         color: white;
         font-size: 20px;
-    }
-    h1:hover{
+        margin: 0;
+
         cursor: pointer;
     }
+
     .mainDiv {
         position: relative;
         display: inline-block;
@@ -25,29 +46,151 @@ header {
         position: absolute;
         top: 100%;
         left: 0;
-      
-        display: none;
+
+        min-width: 250px;
+
+        display: flex;
+        flex-direction: column;
+
         padding: 10px 20px;
-        background: rgba(0, 0, 0);
+
+        background: rgb(29, 29, 66);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.2s ease,
+            transform 0.2s ease,
+            visibility 0.2s;
     }
 
     .mainDiv:hover .div {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-          
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     a {
-        
+             background: rgb(29, 29, 66);
         color: white;
         text-decoration: none;
         font-size: 20px;
+        padding-left: 40px;
+    }
+
+    .div a {
         border-bottom: 1px solid white;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding: 10px 0;
+    }
+
+    .profileLink,
+    .adminLink {
+        white-space: nowrap;
+    }
+
+    .menuButton {
+        display: none;
+
+        background: none;
+        border: none;
+
+        color: white;
+        font-size: 32px;
+
+        cursor: pointer;
     }
 }
-header a{
-    border: none;
+
+
+
+@media (max-width: 765px) {
+
+    header {
+        min-height: 70px;
+        padding: 0 20px;
+
+        justify-content: space-between;
+
+        position: sticky;
+
+        .menuButton {
+            display: block;
+            margin-right: 40px;
+        }
+
+        .navigation {
+           
+            position: absolute;
+
+            top: 70px;
+            
+
+            width: 100%;
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+            background: rgb(29, 29, 66);
+
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+
+            gap: 5px;
+
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation.open {
+            display: flex;
+        }
+
+        .mainDiv {
+            
+            width: 100%;
+        }
+
+        h1 {
+             
+            font-size: 18px;
+            padding: 15px 0;
+        }
+
+        .div {
+            position: static;
+
+            width: 100%;
+            min-width: 0;
+
+            box-sizing: border-box;
+
+            padding: 0 0 10px 15px;
+
+            display: none;
+
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .mainDiv:hover .div {
+            display: flex;
+        }
+
+        .div a {
+            margin-left: 40px;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+
+        .profileLink,
+        .adminLink {
+            padding: 15px 0;
+            border-top: 1px solid #35356d;
+        }
+    }
 }

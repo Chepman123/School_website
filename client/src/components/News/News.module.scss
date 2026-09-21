@@ -1,0 +1,38 @@
+.div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: rgb(29, 29, 66);
+    margin: 20px;
+    border-radius: 20px;
+    img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+    h2{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px 10px 20px;
+        border-radius: 20px;
+        margin-bottom:30px;
+        transition: all ease-in-out 0.2s;
+    }
+    p{
+        margin-left: 10px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
+    a:hover{
+        scale: 1.2;
+    }
+}

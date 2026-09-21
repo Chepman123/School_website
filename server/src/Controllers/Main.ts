@@ -8,4 +8,9 @@ export default class MainContoller{
         const result:{admin:boolean,username:string} = await this.service.GetHeader(req.cookies.token);
         res.json(result);
     }
+    async GetNews(req:Request,res:Response){
+        const result = await this.service.GetNews();
+        res.json(result);
+    }
+    
 }

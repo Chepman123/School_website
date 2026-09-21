@@ -45,6 +45,10 @@
         display: none;
         font-size: 100px;
     }
+    p{
+         text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+        color: red;
+    }
     img:hover{
         cursor: pointer;
         opacity: 0.5;
@@ -53,5 +57,20 @@
         color: white;
             display: block;
 
+    }
+    select{
+        margin-bottom: 20px;
+        font-size: 30px;
+        padding: 10px 30px 10px 20px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
     }
 }

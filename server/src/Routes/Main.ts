@@ -9,6 +9,7 @@ export default ()=>{
     const controller:MainContoller = new MainContoller(service);
 
     router.get('/header',(req:Request,res:Response)=>controller.GetHeader(req,res));
+    router.get('/',(req:Request,res:Response)=>controller.GetNews(req,res));
 
     return router
 }
